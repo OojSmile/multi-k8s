@@ -10,7 +10,7 @@ docker push oojsmile/multi-client:$SHA
 docker push oojsmile/multi-server:$SHA
 docker push oojsmile/multi-worker:$SHA
 
-kubectl apply -f k8t
+kubectl apply -f k8s
 kubectl set image deployments/client-deployment client=oojsmile/multi-client:$SHA
 kubectl set image deployments/server-deployment server=oojsmile/multi-server:$SHA
 kubectl set image deployments/worker-deployment worker=oojsmile/multi-worker:$SHA
